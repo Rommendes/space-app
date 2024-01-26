@@ -1,25 +1,27 @@
-import { createGlobalStyle } from 'styled-components'
-
-import GandhiSansRegular from './fontes/GandhiSans-Regular.otf'
-import GandhiSansBold from './fontes/GandhiSans-Bold.otf'
+import { createGlobalStyle } from "styled-components";
+import GandhiSansRegular from './fontes/GandhiSans-Regular.otf';
+import GandhiSansBold from './fonte/GandhiSans-Bold.otf';
 
 const EstilosGlobais = createGlobalStyle`
+
 @font-face {
-  font-family: 'GandhiSansRegular';
-  src: local('Gandhi Sans Regular'), local('GandhiSansRegular'), url(${GandhiSansRegular});
+    font-family: 'GandhiSansRegular';
+    src: local('Gandhi Sans Regular'), local('GandhiSansRegular') url(${GandhiSansRegular});
 }
 @font-face {
-  font-family: 'GandhiSansBold';
-  src: local('Gandhi Sans Bold'), local('GandhiSansBold'), url(${GandhiSansBold});
+    font-family: 'GandhiSansBold';
+    src: local('Gandhi Sans Bold'), local('GandhiSansBold') url(${GandhiSansBold});
 }
+/*NORMALIZE */
 html {
-  line-height: 1.15; 
-  -webkit-text-size-adjust: 100%; 
-  font-family: GandhiSansRegular;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  font-family:GandhiSansRegular;
 }
 body {
   margin: 0;
   min-height: 100vh;
+ 
 }
 main {
   display: block;
@@ -29,17 +31,21 @@ h1 {
   margin: 0.67em 0;
 }
 hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 a {
   background-color: transparent;
 }
 abbr[title] {
-  border-bottom: none; 
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 b,
 strong {
@@ -48,8 +54,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; 
-  font-size: 1em; 
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 small {
   font-size: 80%;
@@ -75,17 +81,17 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; 
-  font-size: 100%; 
-  line-height: 1.15; 
-  margin: 0; 
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 button,
-input { 
+input { /* 1 */
   overflow: visible;
 }
 button,
-select { 
+select { /* 1 */
   text-transform: none;
 }
 button,
@@ -111,12 +117,12 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 legend {
-  box-sizing: border-box; 
-  color: inherit; 
-  display: table; 
-  max-width: 100%; 
-  padding: 0; 
-  white-space: normal; 
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 progress {
   vertical-align: baseline;
@@ -126,23 +132,23 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; 
-  padding: 0; 
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 [type="search"] {
-  -webkit-appearance: textfield; 
-  outline-offset: -2px; 
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; 
-  font: inherit; 
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 details {
   display: block;
@@ -157,5 +163,4 @@ template {
   display: none;
 }
 `
-
-export default EstilosGlobais
+export default EstilosGlobais;
